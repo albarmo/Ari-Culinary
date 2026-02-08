@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PRIMARY SEO METADATA -->
+    <title>Ari Ramadhan | Culinary Professional & F&B Product Specialist</title>
+    <meta name="description" content="A culinary journey from Indonesia to Japan and the high seas. Discover Ari Ramadhan's portfolio of international F&B experience, precision, and flavor.">
+    <meta name="keywords" content="Ari Ramadhan, Culinary Professional, Food & Beverage Product, Indonesian Chef, Japanese Cuisine, Cruise Ship Galley, F&B Portfolio, Commis Chef">
+    <meta name="author" content="Ari Ramadhan">
+    <meta name="robots" content="index, follow">
+    
+    <!-- OPEN GRAPH / SOCIAL MEDIA -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Ari Ramadhan: Crafting Flavors Across Borders">
+    <meta property="og:description" content="Explore a portfolio defined by discipline, culture, and taste. From Jakarta to Hakone, a story of culinary dedication.">
+    <meta property="og:url" content="https://ariramadhan.portfolio/">
+    <meta property="og:image" content="https://ariramadhan.portfolio/assets/og-preview.jpg">
+    <meta property="og:site_name" content="Ari Ramadhan Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ari Ramadhan | Culinary Professional">
+    <meta name="twitter:description" content="Dedicated Food & Beverage Product professional with 5+ years of international experience.">
+    <meta name="twitter:image" content="https://ariramadhan.portfolio/assets/og-preview.jpg">
+
+    <!-- SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ari Ramadhan",
+      "jobTitle": "Food & Beverage Product Professional",
+      "url": "https://ariramadhan.portfolio/",
+      "nationality": "Indonesian",
+      "description": "Dedicated and versatile Culinary Professional with over 5 years of international experience.",
+      "knowsAbout": ["Asian Cuisine", "Western Cuisine", "HACCP", "USPH Standards", "Japanese Hospitality"],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Sahid Institute of Tourism"
+      },
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jakarta Selatan",
+          "addressCountry": "Indonesia"
+        }
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'culinary-cream': '#FDFBF7',
+                        'culinary-charcoal': '#2C2C2C',
+                        'culinary-sage': '#8A9A5B',
+                        'culinary-gold': '#C5A065',
+                        'culinary-gray': '#787878',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grain': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 400 400%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animation Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #2C2C2C;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Scrollbar */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #D1D5DB;
+            border-radius: 20px;
+        }
+        
+        /* Gallery */
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-culinary-cream text-culinary-charcoal font-sans antialiased selection:bg-culinary-sage selection:text-white relative">
+
+    <!-- Grain Overlay -->
+    <div class="fixed inset-0 pointer-events-none z-50 bg-grain mix-blend-multiply opacity-50"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 top-0 bg-culinary-cream/90 backdrop-blur-sm border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="font-serif text-xl tracking-widest uppercase hover:text-culinary-sage transition-colors">Ari Ramadhan</a>
+            
+            <div class="hidden md:flex space-x-8 text-sm tracking-wide text-culinary-gray">
+                <!-- UPDATED: "About" -->
+                <a href="#about" class="nav-link hover:text-culinary-charcoal transition-colors">About</a>
+                <a href="#philosophy" class="nav-link hover:text-culinary-charcoal transition-colors">Philosophy</a>
+                <a href="#journey" class="nav-link hover:text-culinary-charcoal transition-colors">Journey</a>
+                <a href="#expertise" class="nav-link hover:text-culinary-charcoal transition-colors">Expertise</a>
+                <a href="#gallery" class="nav-link hover:text-culinary-charcoal transition-colors">Gallery</a>
+                <a href="#contact" class="nav-link hover:text-culinary-charcoal transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl" id="menu-btn" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-culinary-cream z-30 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 text-xl font-serif">
+        <button id="close-menu" class="absolute top-6 right-6 text-2xl" aria-label="Close Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <!-- UPDATED: "About" -->
+        <a href="#about" class="mobile-link" onclick="closeMenu()">About</a>
+        <a href="#philosophy" class="mobile-link" onclick="closeMenu()">Philosophy</a>
+        <a href="#journey" class="mobile-link" onclick="closeMenu()">Journey</a>
+        <a href="#expertise" class="mobile-link" onclick="closeMenu()">Expertise</a>
+        <a href="#gallery" class="mobile-link" onclick="closeMenu()">Gallery</a>
+        <a href="#contact" class="mobile-link" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-culinary-sage fill-current">
+                <path d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.7C91.4,-34.3,98.1,-19.6,95.8,-5.8C93.5,8,82.1,20.9,71.2,32.3C60.2,43.7,49.7,53.6,37.8,61.8C25.9,70,12.6,76.5,-1.2,78.6C-15,80.7,-28.3,78.3,-40.5,71.1C-52.7,63.9,-63.8,51.8,-71.4,38.3C-79,24.8,-83.1,9.9,-81.2,-4.2C-79.3,-18.3,-71.4,-31.6,-61,-42.6C-50.6,-53.6,-37.7,-62.3,-24.3,-70C-10.9,-77.7,3,-84.4,16.8,-83.6C30.6,-82.9,44.7,-76.4,44.7,-76.4Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+
+        <div class="z-10 max-w-4xl mx-auto">
+            <p class="text-culinary-sage tracking-[0.2em] uppercase text-sm mb-6 font-semibold animate-pulse">The Portfolio of Ari Ramadhan</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8 text-culinary-charcoal">
+                Crafting Flavors <br /> <span class="italic text-culinary-gray font-light">Across Borders</span>
+            </h1>
+            <p class="font-light text-lg md:text-xl text-culinary-gray max-w-2xl mx-auto mb-12 leading-relaxed">
+                From the bustling markets of Jakarta to the precision of Japan and the vastness of the open ocean. A culinary journey defined by discipline, culture, and taste.
+            </p>
+            <a href="#about" class="inline-block border border-culinary-charcoal px-8 py-3 text-sm tracking-widest hover:bg-culinary-charcoal hover:text-white transition-all duration-300">
+                BEGIN THE JOURNEY
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-culinary-gray">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 md:py-32 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative reveal">
+                <div class="aspect-[4/5] bg-gray-200 overflow-hidden relative shadow-2xl">
+                    <img src="https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-4.jpeg?updatedAt=1770523556845" 
+                         alt="Ari Ramadhan practicing mise-en-place preparation" 
+                         loading="lazy"
+                         class="object-cover w-full h-full opacity-90 hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 border-[1px] border-white m-4 opacity-30"></div>
+                </div>
+                <div class="absolute -bottom-8 -right-8 bg-white p-6 shadow-xl max-w-xs hidden md:block">
+                    <p class="font-serif italic text-culinary-charcoal text-lg">"Cooking is the art of patience."</p>
+                </div>
+            </div>
+            
+            <div class="reveal">
+                <!-- UPDATED TITLE: "The Roots of Flavor" -->
+                <h2 class="font-serif text-4xl md:text-5xl mb-8">The Roots of Flavor</h2>
+                <div class="w-16 h-0.5 bg-culinary-sage mb-8"></div>
+                
+                <p class="text-lg text-culinary-gray leading-relaxed mb-6">
+                    My journey started in Jakarta, grounded in the vibrant, spice-rich heritage of Indonesia. What began as curiosity transformed into a vocation at the <strong>Sahid Institute of Tourism</strong>, where I earned my Bachelor of Applied Science in Hotel Management.
+                </p>
+                <p class="text-lg text-culinary-gray leading-relaxed mb-6">
+                    For the past 5 years, I have been a nomad of the kitchen. I have honed my craft in the tropical heat of Thailand, mastered the exacting standards of Japanese hospitality in Hakone and Hamamatsu, and served thousands on the rolling waves with Holland America Line.
+                </p>
+                
+                <div class="mt-10 flex flex-wrap gap-4">
+                     <span class="px-4 py-2 border border-gray-200 text-sm tracking-wide text-gray-600">Based in Jakarta</span>
+                     <span class="px-4 py-2 border border-gray-200 text-sm tracking-wide text-gray-600">Open to Relocation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="bg-white py-24 px-6 border-y border-gray-100">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="font-serif text-3xl md:text-4xl mb-12">The Philosophy of Service</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-6">
+                    <div class="text-culinary-sage text-4xl mb-4 font-serif italic">01.</div>
+                    <h3 class="uppercase tracking-widest text-sm font-bold mb-3">Preparation</h3>
+                    <p class="text-gray-500 font-light">Mise-en-place is not just a technique; it is a state of mind. Order in the kitchen leads to excellence on the plate.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-culinary-sage text-4xl mb-4 font-serif italic">02.</div>
+                    <h3 class="uppercase tracking-widest text-sm font-bold mb-3">Hygiene</h3>
+                    <p class="text-gray-500 font-light">Strict adherence to USPH and HACCP standards. Safety is the silent ingredient in every successful dish.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-culinary-sage text-4xl mb-4 font-serif italic">03.</div>
+                    <h3 class="uppercase tracking-widest text-sm font-bold mb-3">Adaptability</h3>
+                    <p class="text-gray-500 font-light">From high-volume buffet operations to intimate plated dinners, fluidity is key to surviving the heat of the line.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Journey -->
+    <section id="journey" class="py-24 md:py-32 px-6 bg-culinary-cream">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-culinary-sage tracking-widest uppercase text-xs font-bold">Experience</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-3">Chapters of Growth</h2>
+            </div>
+            <div class="relative border-l border-gray-300 ml-4 md:ml-0 space-y-16">
+                <!-- Role 1 -->
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-culinary-sage"></div>
+                    <div class="md:flex md:justify-between md:items-baseline">
+                        <div class="md:w-1/3 md:text-right md:pr-12 mb-2 md:mb-0">
+                            <span class="block text-sm text-culinary-gold font-bold tracking-wider">DEC 2024 — JAN 2026</span>
+                            <span class="block text-xs text-gray-400 mt-1 uppercase">Japan</span>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="font-serif text-2xl text-culinary-charcoal">Kitchen Assistant</h3>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-gray-500 mb-4">Hakone Pax Yoshino</h4>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Immersed in the disciplined world of Japanese hospitality. Responsible for precise mise-en-place, managing grocery stock with zero waste, and overseeing staff canteen operations.
+                            </p>
+                            <!-- ADDED THUMBNAIL -->
+                            <div class="flex gap-2 mt-4">
+                                <img src="https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-22.jpeg?updatedAt=1770523556845&tr=w-150,h-150,fo-auto" 
+                                     alt="Hakone Pax Yoshino Experience" 
+                                     class="w-20 h-20 object-cover rounded shadow-sm hover:opacity-80 transition cursor-pointer"
+                                     onclick="openLightbox('https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-22.jpeg?updatedAt=1770523556845')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Role 2 -->
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-gray-300"></div>
+                    <div class="md:flex md:justify-between md:items-baseline">
+                        <div class="md:w-1/3 md:text-right md:pr-12 mb-2 md:mb-0">
+                            <span class="block text-sm text-gray-500 font-bold tracking-wider">APR 2023 — DEC 2023</span>
+                            <span class="block text-xs text-gray-400 mt-1 uppercase">Intl. Waters</span>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="font-serif text-2xl text-culinary-charcoal">Kitchen Assistant</h3>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-gray-500 mb-4">Holland America Line</h4>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Navigating the high-pressure environment of the Lido Market and Crew Galley. Mastered high-volume production while maintaining impeccable USPH sanitation scores.
+                            </p>
+                            <!-- ADDED THUMBNAILS -->
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <img src="https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-5.jpeg?updatedAt=1770523556845&tr=w-150,h-150,fo-auto" 
+                                     alt="Holland America Line Experience 1" 
+                                     class="w-20 h-20 object-cover rounded shadow-sm hover:opacity-80 transition cursor-pointer"
+                                     onclick="openLightbox('https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-5.jpeg?updatedAt=1770523556845')">
+                                <img src="https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-6.jpeg?updatedAt=1770523556845&tr=w-150,h-150,fo-auto" 
+                                     alt="Holland America Line Experience 2" 
+                                     class="w-20 h-20 object-cover rounded shadow-sm hover:opacity-80 transition cursor-pointer"
+                                     onclick="openLightbox('https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-6.jpeg?updatedAt=1770523556845')">
+                                <img src="https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-7.jpeg?updatedAt=1770523556845&tr=w-150,h-150,fo-auto" 
+                                     alt="Holland America Line Experience 3" 
+                                     class="w-20 h-20 object-cover rounded shadow-sm hover:opacity-80 transition cursor-pointer"
+                                     onclick="openLightbox('https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-7.jpeg?updatedAt=1770523556845')">
+                                <img src="https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-4.jpeg?updatedAt=1770523556845&tr=w-150,h-150,fo-auto" 
+                                     alt="Holland America Line Experience 4" 
+                                     class="w-20 h-20 object-cover rounded shadow-sm hover:opacity-80 transition cursor-pointer"
+                                     onclick="openLightbox('https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-4.jpeg?updatedAt=1770523556845')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Role 3 -->
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-gray-300"></div>
+                    <div class="md:flex md:justify-between md:items-baseline">
+                        <div class="md:w-1/3 md:text-right md:pr-12 mb-2 md:mb-0">
+                            <span class="block text-sm text-gray-500 font-bold tracking-wider">FEB 2020 — FEB 2021</span>
+                            <span class="block text-xs text-gray-400 mt-1 uppercase">Japan</span>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="font-serif text-2xl text-culinary-charcoal">Food Product Staff</h3>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-gray-500 mb-4">Sago Royal Hotel</h4>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                My introduction to Japanese kitchen standards. Focused on operational preparation and inventory management. This role built the foundation of my work ethic.
+                            </p>
+                            <!-- ADDED THUMBNAIL -->
+                            <div class="flex gap-2 mt-4">
+                                <img src="https://ik.imagekit.io/qrhk08i41/my-experience-at-sago-royal-hotel.jpeg?tr=w-150,h-150,fo-auto" 
+                                     alt="Sago Royal Hotel Experience" 
+                                     class="w-20 h-20 object-cover rounded shadow-sm hover:opacity-80 transition cursor-pointer"
+                                     onclick="openLightbox('https://ik.imagekit.io/qrhk08i41/my-experience-at-sago-royal-hotel.jpeg')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-gray-300"></div>
+                    <div class="md:flex md:justify-between md:items-baseline">
+                        <div class="md:w-1/3 md:text-right md:pr-12 mb-2 md:mb-0">
+                            <span class="block text-sm text-gray-500 font-bold tracking-wider">MAR 2018 — SEP 2018</span>
+                            <span class="block text-xs text-gray-400 mt-1 uppercase">Thailand</span>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="font-serif text-2xl text-culinary-charcoal">Trainee Food Product</h3>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-gray-500 mb-4">Novotel Phuket Surin Beach Resort</h4>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                An internship that opened my eyes to international flavors. Handling guest orders and preparation in a fast-paced resort environment. Balancing the heat of the wok with the expectations of global travelers.
+                            </p>
+                            <!-- ADDED THUMBNAIL -->
+                            <div class="flex gap-2 mt-4">
+                                <img src="https://ik.imagekit.io/qrhk08i41/my-experience-at-novotel.jpeg?tr=w-150,h-150,fo-auto" 
+                                     alt="Novotel Phuket Experience" 
+                                     class="w-20 h-20 object-cover rounded shadow-sm hover:opacity-80 transition cursor-pointer"
+                                     onclick="openLightbox('https://ik.imagekit.io/qrhk08i41/my-experience-at-novotel.jpeg')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 5 -->
+                <div class="relative pl-12 md:pl-0 reveal">
+                    <div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-gray-300"></div>
+                    <div class="md:flex md:justify-between md:items-baseline">
+                        <div class="md:w-1/3 md:text-right md:pr-12 mb-2 md:mb-0">
+                            <span class="block text-sm text-gray-500 font-bold tracking-wider">DEC 2014 — JUN 2015</span>
+                            <span class="block text-xs text-gray-400 mt-1 uppercase">Indonesia</span>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="font-serif text-2xl text-culinary-charcoal">Trainee Food Product</h3>
+                            <h4 class="text-sm font-bold uppercase tracking-wide text-gray-500 mb-4">Hotel Ibis Thamrin</h4>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                My first step into the professional culinary world. Learning the fundamentals of kitchen operations, from ingredient preparation to executing guest orders with consistency in the heart of Jakarta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal mb-12 text-center md:text-left">
+                 <h2 class="font-serif text-4xl mb-4">The Ingredients <br><span class="italic text-culinary-sage text-3xl">of my craft</span></h2>
+                 <p class="text-gray-600 leading-relaxed max-w-2xl">
+                    Just as a dish relies on the quality of its components, my professional value is built on a comprehensive set of honed skills.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 reveal">
+                <!-- Culinary -->
+                <div>
+                    <h3 class="font-serif text-2xl mb-6 text-culinary-charcoal border-b border-gray-100 pb-2">Culinary Mastery</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">Asian & Western Cuisine</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">Plating & Presentation</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">High-Volume Cooking</span></li>
+                    </ul>
+                </div>
+                <!-- Operational -->
+                <div>
+                    <h3 class="font-serif text-2xl mb-6 text-culinary-charcoal border-b border-gray-100 pb-2">Operations & Safety</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">HACCP & USPH Standards</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">Inventory & FIFO</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">Waste Management</span></li>
+                    </ul>
+                </div>
+                <!-- Professional -->
+                <div>
+                    <h3 class="font-serif text-2xl mb-6 text-culinary-charcoal border-b border-gray-100 pb-2">Maritime & Pro</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">STCW / CCM / BST</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">Multicultural Teamwork</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-culinary-sage text-xs mt-1">✦</span><span class="text-gray-600">High-Pressure Tolerance</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-24 px-6 bg-culinary-cream relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-culinary-sage tracking-widest uppercase text-xs font-bold">Gallery</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-3">Culinary Canvas</h2>
+                <p class="text-gray-500 mt-4 max-w-xl mx-auto">A visual collection representing the styles, techniques, and atmospheres I have navigated throughout my career.</p>
+            </div>
+
+            <!-- Dynamic Masonry Grid -->
+            <!-- Images will be injected here by JavaScript to maintain clean code and optimal loading -->
+            <div id="gallery-grid" class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 min-h-[500px]">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-culinary-sage focus:outline-none">&times;</button>
+        <img id="lightbox-img" src="" class="max-h-[90vh] max-w-[90vw] object-contain shadow-2xl rounded-sm transform scale-95 transition-transform duration-300">
+    </div>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 md:py-32 px-6 bg-culinary-cream text-center">
+        <div class="max-w-2xl mx-auto reveal">
+            <span class="text-culinary-sage tracking-widest uppercase text-xs font-bold">Get In Touch</span>
+            <h2 class="font-serif text-4xl md:text-6xl my-6 text-culinary-charcoal">Let's Create Something Beautiful</h2>
+            <p class="text-gray-500 mb-10 text-lg">
+                Currently based in Indonesia. Requires work visa sponsorship.
+            </p>
+            <a href="mailto:armdhn.work@gmail.com" class="text-2xl md:text-3xl font-serif italic border-b border-culinary-charcoal pb-1 hover:text-culinary-sage hover:border-culinary-sage transition-all">
+                armdhn.work@gmail.com
+            </a>
+
+            <!-- DOWNLOAD CV BUTTON UPDATED -->
+            <div class="mt-10">
+                <a href="https://ik.imagekit.io/qrhk08i41/Ari%20Ramadhan%20-%20Food%20&%20Beverage%20Product%20-%20CV%20(2026).pdf" target="_blank" class="inline-flex items-center px-8 py-3 border border-culinary-charcoal text-culinary-charcoal text-sm tracking-widest uppercase hover:bg-culinary-charcoal hover:text-white transition-all duration-300 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 group-hover:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download CV
+                </a>
+            </div>
+
+            <div class="mt-12 flex justify-center space-x-8 text-sm font-bold tracking-widest uppercase text-gray-400">
+                <a href="https://www.linkedin.com/in/ari-ramadhan-737440164" class="hover:text-culinary-charcoal transition-colors">LinkedIn</a>
+                <span class="text-gray-300">|</span>
+                <span>(+62) 813 1816 6330</span>
+            </div>
+            <div class="mt-16 text-xs text-gray-400">
+                <p>&copy; 2026 Ari Ramadhan. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Gallery Images Data
+        const galleryImages = [
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-27.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-50.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-62.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-40.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-44.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-54.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-53.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-24.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-25.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-2.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-36.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-52.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-26.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-65.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-42.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-63.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-68.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-48.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-28.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-1.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-45.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-46.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-57.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-67.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-39.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-60.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-30.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-66.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-41.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-47.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-8.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-11.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-49.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-38.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-17.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-37.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-3.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-43.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-51.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-10.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-21.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-35.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-64.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-20.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-29.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-15.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-33.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-31.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-14.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-34.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-13.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-59.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-58.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-19.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-56.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-32.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-12.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-9.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-55.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-16.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-61.jpeg?updatedAt=1770523556845",
+            "https://ik.imagekit.io/qrhk08i41/armdhn-culinary-portfolio-18.jpeg?updatedAt=1770523556845",
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Render Gallery ---
+            function renderGallery() {
+                const grid = document.getElementById('gallery-grid');
+                if (!grid) return;
+                
+                grid.innerHTML = '';
+                const fragment = document.createDocumentFragment();
+
+                galleryImages.forEach((url, index) => {
+                    const div = document.createElement('div');
+                    // 'break-inside-avoid' prevents image from splitting across columns
+                    // 'mb-6' adds spacing between items vertically in the column layout
+                    div.className = "break-inside-avoid group relative rounded-sm reveal cursor-pointer overflow-hidden mb-6"; 
+                    div.setAttribute('onclick', `openLightbox('${url}')`);
+
+                    // Use ImageKit transformation for thumbnails: w-600, q-80
+                    const thumbUrl = url + "&tr=w-600,q-80";
+                    
+                    div.innerHTML = `
+                        <img src="${thumbUrl}" 
+                             alt="Culinary Portfolio Gallery Image ${index + 1}" 
+                             loading="lazy" 
+                             decoding="async"
+                             width="600" height="800"
+                             class="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 bg-gray-100">
+                        <div class="absolute inset-0 bg-culinary-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    `;
+                    fragment.appendChild(div);
+                });
+
+                grid.appendChild(fragment);
+                
+                // Trigger reveal for newly added elements
+                setTimeout(reveal, 100);
+            }
+
+            // --- Reveal on Scroll Logic ---
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 50; // trigger earlier
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    }
+                }
+            }
+            window.addEventListener("scroll", reveal);
+            
+            // Initial calls
+            renderGallery();
+            reveal(); 
+
+            // --- Mobile Menu Logic ---
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuBtn && closeBtn && mobileMenu) {
+                window.openMenu = function() {
+                    mobileMenu.classList.remove('translate-x-full');
+                }
+                window.closeMenu = function() {
+                    mobileMenu.classList.add('translate-x-full');
+                }
+                menuBtn.addEventListener('click', window.openMenu);
+                closeBtn.addEventListener('click', window.closeMenu);
+            }
+
+            // --- Smooth Scroll ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if(target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // --- Lightbox Logic ---
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            window.openLightbox = function(src) {
+                if(!lightbox || !lightboxImg) return;
+                lightboxImg.src = src;
+                lightbox.classList.remove('hidden');
+                setTimeout(() => {
+                    lightbox.classList.remove('opacity-0');
+                    lightboxImg.classList.remove('scale-95');
+                    lightboxImg.classList.add('scale-100');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            window.closeLightbox = function() {
+                if(!lightbox || !lightboxImg) return;
+                lightbox.classList.add('opacity-0');
+                lightboxImg.classList.remove('scale-100');
+                lightboxImg.classList.add('scale-95');
+                setTimeout(() => {
+                    lightbox.classList.add('hidden');
+                    lightboxImg.src = '';
+                }, 300);
+                document.body.style.overflow = 'auto';
+            }
+            
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    window.closeLightbox();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
